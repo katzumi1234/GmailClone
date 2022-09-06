@@ -31,13 +31,15 @@ import androidx.compose.ui.window.DialogProperties
 import ro.exemplu.gmailcopy.R
 
 @Composable
-fun AccountsDialog(openDialog: MutableState<Boolean>)
-{
+fun AccountsDialog(openDialog: MutableState<Boolean>){
  Dialog(onDismissRequest= {openDialog.value = false },
-     properties = DialogProperties(dismissOnClickOutside = false ))
-    {
+     properties = DialogProperties(dismissOnClickOutside = false )
+
+
+
+ ){
         AccontsDialog1(openDialog = openDialog)
-    }
+ }
 }
 @Composable
 fun AccontsDialog1(modifier: Modifier = Modifier, openDialog: MutableState<Boolean>) {
@@ -98,14 +100,10 @@ fun AccontsDialog1(modifier: Modifier = Modifier, openDialog: MutableState<Boole
                 Card(
                     modifier = Modifier
                         .padding(top = 10.dp)
-                        .size(7.dp),
+                        .size(3.dp),
                     shape = CircleShape,
-                    backgroundColor = Color.Blue
-
-                )
-                {
-
-                }
+                    backgroundColor = Color.Blue){}
+                Text(text = "Terms Of Service")
             }
         }
     }
