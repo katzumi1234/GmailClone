@@ -68,15 +68,17 @@ fun AccontsDialog1(modifier: Modifier = Modifier, openDialog: MutableState<Boole
             Row(
                 modifier
                     .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            )
+                horizontalArrangement = Arrangement.SpaceEvenly)
             {
                 Card(
                     modifier.requiredWidth(150.dp),
                     shape = RoundedCornerShape(50.dp),
-                    border = BorderStroke(1.dp, color = Color.Blue)
+                    border = BorderStroke(1.dp, color = Color.Gray)
                 )
                 {
+                    Text(text = "Google Account",
+                    modifier.padding(8.dp),
+                    textAlign = TextAlign.Center)
 
                 }
                 Spacer(modifier.width(10.dp))
