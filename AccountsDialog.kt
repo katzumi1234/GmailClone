@@ -1,7 +1,5 @@
 package ro.exemplu.gmailcopy.componente
 
-
-
 import android.annotation.SuppressLint
 import ro.exemplu.gmailcopy.model.Account
 import androidx.compose.foundation.BorderStroke
@@ -33,15 +31,13 @@ import androidx.compose.ui.window.DialogProperties
 import ro.exemplu.gmailcopy.R
 
 @Composable
-fun AccountsDialog(openDialog: MutableState<Boolean>){
+fun AccountsDialog(openDialog: MutableState<Boolean>)
+{
  Dialog(onDismissRequest= {openDialog.value = false },
-     properties = DialogProperties(dismissOnClickOutside = false )
-
-
-
- ){
+     properties = DialogProperties(dismissOnClickOutside = false ))
+    {
         AccontsDialog1(openDialog = openDialog)
- }
+    }
 }
 @Composable
 fun AccontsDialog1(modifier: Modifier = Modifier, openDialog: MutableState<Boolean>) {
@@ -66,29 +62,6 @@ fun AccontsDialog1(modifier: Modifier = Modifier, openDialog: MutableState<Boole
                 )
             }
             AccountItem(account = accountList[0])
-            Row(
-                modifier
-                    .fillMaxWidth()
-                    .padding(start = 16.dp, top = 16.dp)
-            )
-            {
-                Image(
-                    painter = painterResource(id = R.drawable.tedy), contentDescription = "Profile",
-                    modifier
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(color = Color.Magenta)
-                )
-                Column(
-                    modifier
-                        .weight(2.0f)
-                        .padding(start = 16.dp, bottom = 16.dp)
-                ) {
-                    Text(text = "Tedy Accont", fontWeight = FontWeight.SemiBold)
-                    Text(text = "TedyAccont864@gmail.com")
-                }
-                Text(text = "99+", modifier = Modifier.padding(end = 16.dp))
-            }
 
             Row(
                 modifier
